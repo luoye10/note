@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>speed test</title>
+    <style>
+        .container{
+            width: 400px;
+            height: 300px;
+            margin: 50px auto;
+            position: relative;
+            background: aqua;
+        }
+        .line{
+            width: 6px;
+            height: 100px;
+            background: #6cf;
+            position: absolute;
+            left: 197px;
+            bottom: 10px;
+            transform-origin: bottom;
+            transform: rotate(-90deg);
+            transition: all 1s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="line"></div>
+    </div>
+    <script>
+        var xhr = new XMLHttpRequest();
+        var time = Date.now();
+        xhr.open('get', 'https://gank.io/api/v2/banners')
+        xhr.onreadystatechange = function() {
+            if(xhr.readyState === 4 && xhr.status === 200) {
+                var t = Date.now();
+                var length = xhr.getResponseHeader('Content-Length');
+                var s = Math.floor(length / 1024 * 1000 / (t - time));
+                console.log(t - time)
+                console.log('当前速度' + s + 'kb/s');
+            }
+        }
+        xhr.send(null)
+    </script>
+</body>
+</html>
