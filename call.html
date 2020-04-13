@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var foo = {
+            value:'hello'
+        };
+        function bar(name,age){
+            console.log(this.value);
+            console.log(name);
+            console.log(age);
+        };
+        bar.call(foo,'猪八戒',1124);
+
+
+        Function.prototype.call2 = function(context,name,age){
+            context.fn = this;
+            context.fn(name,age);
+            delete context.fn;
+        };
+        var fo = {
+            value:'world'
+        };
+        function br(name,age){
+            console.log(this.value);
+            console.log(name);
+            console.log(age);
+        };
+        br.call2(fo,'孙悟空',587);
+    </script>
+</body>
+</html>
