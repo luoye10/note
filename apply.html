@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var foo = {
+            name: '二郎神'
+        };
+        function bar(age,gender){
+            console.log(this.name);
+            console.log(age);
+            console.log(gender);
+        };
+        bar.apply(foo,[876,'男']);
+    </script>
+</body>
+</html>
