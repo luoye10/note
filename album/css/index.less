@@ -1,0 +1,35 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    @w: 100px;
+    @c: #999;
+    @margin: 10px;
+    .type-list{
+        text-align: center;
+        margin: 50px @w;
+        border-bottom: 1px solid @c;
+        li{
+            font-size: 18px;
+            margin: @margin;
+            list-style: none;
+            display: inline-block;
+            color: @c;
+            cursor: pointer;
+            position: relative;
+            &.active::before{
+                content: '';
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: -@margin;
+                height: 4px;
+                background-color: #fb7299;
+                border-radius: 2px;
+            }
+        }
+    }
+    .container-box{
+        margin: 20px @w;
+        
+    }
+}

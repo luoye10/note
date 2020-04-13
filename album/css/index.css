@@ -1,0 +1,36 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+html .type-list,
+body .type-list {
+  text-align: center;
+  margin: 50px 100px;
+  border-bottom: 1px solid #999;
+}
+html .type-list li,
+body .type-list li {
+  font-size: 18px;
+  margin: 10px;
+  list-style: none;
+  display: inline-block;
+  color: #999;
+  cursor: pointer;
+  position: relative;
+}
+html .type-list li.active::before,
+body .type-list li.active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -10px;
+  height: 4px;
+  background-color: #fb7299;
+  border-radius: 2px;
+}
+html .container-box,
+body .container-box {
+  margin: 20px 100px;
+}
