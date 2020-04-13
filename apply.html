@@ -16,6 +16,29 @@
             console.log(gender);
         };
         bar.apply(foo,[876,'男']);
+
+        Function.prototype.apply2 = function(context,arr){
+            context.fn = this;
+            var args = [];
+            for(var i = 0,len = arr.length;i < len;i++){
+                args.push('arr[' + i + ']');
+            }
+            return eval('context.fn('+ args +')');
+            delete context.fn;
+        }
+        var fo = {
+            name: '牛魔王'
+        }
+        function br(race,age,arms,gender){
+            return{
+                name: this.name,
+                race: race,
+                age: age,
+                arms: arms,
+                gender: gender
+            }
+        }
+        console.log(br.apply2(fo,['牛',2546,'斧头','男']));
     </script>
 </body>
 </html>
