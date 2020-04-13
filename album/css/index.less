@@ -4,10 +4,15 @@ html,body{
     @w: 100px;
     @c: #999;
     @margin: 10px;
+    @font-face{
+        font-family: my-font;
+        src: url('../font/a.ttf');
+    }
     .type-list{
         text-align: center;
         margin: 50px @w;
         border-bottom: 1px solid @c;
+        font-family: my-font;
         li{
             font-size: 18px;
             margin: @margin;
@@ -30,6 +35,6 @@ html,body{
     }
     .container-box{
         margin: 20px @w;
-        
+
     }
 }
