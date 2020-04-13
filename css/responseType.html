@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>响应式布局</title>  
+    <link rel="shortcut icon" href="https://static.zhihu.com/heifetz/assets/apple-touch-icon-152.67c7b278.png">
+    <style>
+        html,body{
+            margin: 0;
+            padding: 0;
+            font-size: 0;
+        }
+        .left,.right,.middle{
+            display: inline-block;
+            height: 200px;
+        }
+        .left{
+            background: aqua;
+        }
+        .middle{
+            background: lightblue;
+        }
+        .right{
+            background: #6cf;
+        }
+        @media screen {
+            .left,.middle,.right{
+                width: 33.33%;
+            }
+        }
+        @media screen and (max-width: 1000px){
+            .left,.middle,.right{
+                width: 50%;
+            }
+        }
+        @media screen and (max-width: 750px) {
+            .left,.middle,.right{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="left"></div>
+    <div class="middle"></div>
+    <div class="right"></div>
+</body>
+</html>
