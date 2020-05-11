@@ -1,0 +1,242 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+ul,
+li {
+  list-style: none;
+}
+.style {
+  width: 70px;
+  height: 30px;
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+.title {
+  width: 300px;
+  height: 100%;
+  background: #002242;
+  color: white;
+}
+.title .subject {
+  height: 50px;
+  font-size: 20px;
+  line-height: 50px;
+  text-align: center;
+}
+.title .story div {
+  position: relative;
+}
+.title .story div .system {
+  height: 40px;
+  font-size: 16px;
+  line-height: 40px;
+  padding-left: 40px;
+  cursor: pointer;
+}
+.title .story div .sumbol {
+  position: absolute;
+  right: 20px;
+  top: 0;
+  cursor: pointer;
+}
+.title .story div .setting {
+  display: none;
+}
+.title .story div .setting li {
+  box-sizing: border-box;
+  width: 300px;
+  height: 40px;
+  font-size: 16px;
+  line-height: 40px;
+  cursor: pointer;
+  position: relative;
+}
+.title .story div .setting .user .manage {
+  width: 260px;
+  height: 40px;
+  font-size: 16px;
+  line-height: 40px;
+  cursor: pointer;
+  padding-left: 40px;
+}
+.title .story div .setting .user .covers {
+  box-sizing: border-box;
+  width: 960px;
+  height: 570px;
+  position: absolute;
+  left: 300px;
+  top: -50px;
+  border-top: 1px solid black;
+  display: none;
+}
+.title .story div .setting .user .covers .upper {
+  margin-bottom: 8px;
+}
+.title .story div .setting .user .covers .upper .one {
+  font-size: 14px;
+  color: gray;
+  margin-left: 30px;
+}
+.title .story div .setting .user .covers .upper .two {
+  font-size: 18px;
+  color: black;
+  margin-left: 20px;
+}
+.title .story div .setting .user .covers .element {
+  box-sizing: border-box;
+  width: 100%;
+  height: 490px;
+  border-left: 30px solid #edf1fa;
+  border-top: 40px solid #edf1fa;
+}
+.title .story div .setting .user .covers .element .item {
+  width: 100%;
+  height: 60px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+.title .story div .setting .user .covers .element .item div {
+  margin-top: 10px;
+  float: left;
+}
+.title .story div .setting .user .covers .element .item div:after {
+  content: '';
+  clear: both;
+  display: block;
+}
+.title .story div .setting .user .covers .element .item .username .name {
+  font-size: 14px;
+  color: black;
+}
+.title .story div .setting .user .covers .element .item .username input {
+  width: 240px;
+  height: 30px;
+  border-radius: 3px;
+  background: none;
+  border: 1px solid grey;
+  outline: none;
+}
+.title .story div .setting .user .covers .element .item .state .text {
+  font-size: 14px;
+  text-align: center;
+  line-height: 30px;
+  color: black;
+  margin-left: 20px;
+}
+.title .story div .setting .user .covers .element .item .state .condition {
+  width: 200px;
+  height: 30px;
+  border-radius: 3px;
+}
+.title .story div .setting .user .covers .element .item .state .condition .init {
+  height: 30px;
+  width: 200px;
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+}
+.title .story div .setting .user .covers .element .item .query {
+  width: 70px;
+  height: 30px;
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 5px;
+  margin-right: 20px;
+  color: white;
+  background: #1890ff;
+  margin-left: 20px;
+  margin-top: 15px;
+}
+.title .story div .setting .user .covers .element .item .reset {
+  width: 70px;
+  height: 30px;
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 5px;
+  margin-right: 20px;
+  color: black;
+  border: 1px solid #c6c6c6;
+  margin-top: 15px;
+}
+.title .story div .setting .user .covers .element .item .left {
+  width: 70px;
+  height: 30px;
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 5px;
+  margin-right: 20px;
+  color: white;
+  background: #1890ff;
+}
+.title .story div .setting .user .covers .element .item .center {
+  width: 70px;
+  height: 30px;
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 5px;
+  margin-right: 20px;
+  color: black;
+  border: 1px solid #c6c6c6;
+}
+.title .story div .setting .user .covers .element .item .right {
+  width: 70px;
+  height: 30px;
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 5px;
+  margin-right: 20px;
+  color: white;
+  background: #ff4d4f;
+}
+.title .story div .setting .user .covers .element .item ul {
+  width: 100%;
+  height: 40px;
+  background: #fafafa;
+  border-bottom: 1px solid #bebebe;
+}
+.title .story div .setting .user .covers .element .item ul li {
+  width: 100px;
+  height: 40px;
+  font-size: 14px;
+  text-align: center;
+  color: black;
+  text-align: left;
+  line-height: 40px;
+  float: left;
+  margin-left: 20px;
+}
+.title .story div .setting .user .covers .element .item ul li .box {
+  width: 20px;
+  height: 20px;
+  background: #1890ff;
+  overflow: hidden;
+  border-radius: 3px;
+  margin-left: 20px;
+}
+.title .story div .setting .user .covers .element .item ul li .box .box2 {
+  width: 8px;
+  height: 16px;
+  margin-top: -5px;
+  border-right: 1px solid white;
+  border-bottom: 1px solid white;
+  transform: rotate(45deg) translate(8px);
+}
+.title .story div .setting .interface {
+  padding-left: 40px;
+}
