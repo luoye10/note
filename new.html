@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function O(name,age){
+            this.name = name;
+            this.age = age;
+        };
+        O.prototype.sayHi = function(){
+            console.log('hi');
+        };
+        var o = new O('Smith',40);
+        console.log(o);
+
+        function Person(name,age,gender){
+            this.name = name;
+            this.age = age;
+            return {
+                gender: gender,
+                habit: 'basketball'
+            };
+        };
+        Person.prototype.height = '177';
+        function objectFactory(){
+            var obj = {};
+            Constructor = [].shift.call(arguments);
+            obj.__proto__ = Constructor.prototype;
+            var result = Constructor.apply(obj,arguments);
+            return result instanceof Object ? result : obj;
+        };
+        var person = objectFactory(Person,'David',22,'男');
+        console.log(person);
+        console.log(person.name);
+
+        function Parent(name,age,gender){
+            this.name = name;
+            this.age = age;
+            return function(){
+                console.log('gender : ' + gender);
+            };
+        };
+        Parent.prototype.sayHello = function(){
+            return 'hello';
+        };
+        function objectFactory(){
+            var obj = {},
+            Constructor = [].shift.call(arguments);
+            obj.__proto__ = Constructor.prototype;
+            var result = Constructor.apply(obj,arguments);
+            return result instanceof Object ? result : obj;
+        };
+        var parent = objectFactory(Parent,'Bobby',28,'男');
+        console.log(parent);
+        parent();
+
+        function Child(name,age,gender){
+            this.name = name;
+            this.age = age;
+            return [2,3,4,'hi'];
+        };
+        Child.prototype.strength = 40;
+        function fun(){
+            var obj = {},
+            Con = [].shift.call(arguments);
+            obj.__proto__ = Con.prototype;
+            var ret = Con.apply(obj,arguments);
+            return ret instanceof Object ? ret : obj;
+        };
+        var child = fun(Child,'lily',12,'女');
+        console.log(child);
+
+        function People(name,age){
+            this.name = name;
+            this.age = age;
+            return 'hello world';
+        };
+        People.prototype.weight = '65kg';
+        People.prototype.sayName = function(){
+            console.log('I am ' + this.name);
+        };
+        function fn(){
+            var obj = {},
+            Con = [].shift.call(arguments);
+            obj.__proto__ = Con.prototype;
+            var res = Con.apply(obj,arguments);
+            return res instanceof Object ? ret : obj;
+        };
+        var people = fn(People,'Jack',30);
+        console.log(people);
+        console.log(people.weight);
+        people.sayName();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
