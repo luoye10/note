@@ -11,7 +11,7 @@ html .type-list,
 body .type-list {
   text-align: center;
   margin: 50px 100px;
-  border-bottom: 1px solid #999;
+  border-bottom: 1px solid #939;
   font-family: my-font;
 }
 html .type-list li,
@@ -20,7 +20,7 @@ body .type-list li {
   margin: 10px 20px;
   list-style: none;
   display: inline-block;
-  color: #999;
+  color: #939;
   cursor: pointer;
   position: relative;
 }
@@ -38,4 +38,84 @@ body .type-list li.active::before {
 html .container-box,
 body .container-box {
   margin: 20px 100px;
+}
+html .container-box ul,
+body .container-box ul,
+html .container-box li,
+body .container-box li {
+  margin: 0;
+  padding: 0;
+}
+html .container-box ul,
+body .container-box ul {
+  overflow: hidden;
+}
+html .container-box li,
+body .container-box li {
+  list-style: none;
+  float: left;
+}
+@media screen {
+  html .container-box li,
+  body .container-box li {
+    width: 33.33%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  html .container-box li,
+  body .container-box li {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 600px) {
+  html .container-box li,
+  body .container-box li {
+    width: 100%;
+  }
+}
+html .container-box .img-photo,
+body .container-box .img-photo {
+  width: 80%;
+  position: relative;
+}
+html .container-box .img-photo img,
+body .container-box .img-photo img {
+  width: 100%;
+  margin: 20px 10px;
+  border-radius: 5px;
+  transition: all 1.5s;
+  cursor: pointer;
+}
+html .container-box .img-photo img:hover,
+body .container-box .img-photo img:hover {
+  transform: scale(1.2);
+}
+html .container-box .img-photo .title,
+body .container-box .img-photo .title {
+  position: absolute;
+  left: 35%;
+  top: 30px;
+  font-family: my-font;
+  color: aqua;
+  font-weight: bold;
+  cursor: pointer;
+}
+html .container-box .img-photo .name,
+body .container-box .img-photo .name {
+  position: absolute;
+  left: 35px;
+  bottom: -10px;
+  font-size: 12px;
+  color: #fb7299;
+  cursor: pointer;
+}
+html .container-box .img-photo .head,
+body .container-box .img-photo .head {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  position: absolute;
+  left: 2px;
+  bottom: -30px;
+  cursor: pointer;
 }

@@ -2,228 +2,224 @@
     margin: 0;
     padding: 0;
 }
-@w:100px;
-@h:10px;
-@f:14px;
-@s:18px;
+@w: 100px;
+@h: 10px;
+@f: 14px;
+@s: 18px;
 @bg: #77a7ff;
-html,body{
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-  position: relative;
+html,
+body {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    position: relative;
 }
-ul,li{
-  list-style: none;
+ul,
+li {
+    list-style: none;
 }
-.style{
-  width: @h*7;
-  height: @h*3;
-  font-size: @f;
-  line-height: @h*3;
-  text-align: center;
-  border-radius: 5px;
-  margin-right: @h*2;
+.style {
+    width: @h*7;
+    height: @h*3;
+    font-size: @f;
+    line-height: @h*3;
+    text-align: center;
+    border-radius: 5px;
+    margin-right: @h*2;
 }
 .title {
-  width: @w*3;
-  height: 100%;
-  background: #002242;
-  color: white;
-  .subject {
-    height: @h*5;
-    font-size: @h*2;
-    line-height: @h*5;
-    text-align: center;
-  }
-  .story{
-    div{
-      position: relative;
-      .system{
-        height: @h*4;
-        font-size: 16px;
-        line-height:  @h*4;
-        padding-left:  @h*4;
-        cursor: pointer;
-      }
-      .sumbol{
-        position: absolute;
-        right: @h*2;
-        top: 0;
-        cursor: pointer;
-      }
-      .setting{
-        display: none;
-        li {
-          box-sizing: border-box;
-          width: @w*3;
-          height: @h*4;
-          font-size: 16px;
-          line-height:  @h*4;
-          cursor: pointer;
-          position: relative;
-        }
-        .user{ 
-          .manage{
-            width: @w*2.6;
-            height: @h*4;
-            font-size: 16px;
-            line-height:  @h*4;
-            cursor: pointer;
-            padding-left:  @h*4;
-          }         
-          .covers {
-            box-sizing: border-box;
-            width: @w*9.6;
-            height: @w*5.7;
-            position: absolute;
-            left: @w*3;
-            top: -@h*5;
-            border-top: 1px solid black;
-            display: none;
-            .upper{
-              margin-bottom: 8px;
-              .one{
-                font-size: @f;
-                color: gray;
-                margin-left: @h*3;
-              }
-              .two{
-                font-size: @s;
-                color: black;
-                margin-left: @h*2;
-              }
+    width: @w*3;
+    height: 100%;
+    background: #002242;
+    color: white;
+    .subject {
+        height: @h*5;
+        font-size: @h*2;
+        line-height: @h*5;
+        text-align: center;
+    }
+    .story {
+        div {
+            position: relative;
+            .system {
+                height: @h*4;
+                font-size: 16px;
+                line-height: @h*4;
+                padding-left: @h*4;
+                cursor: pointer;
             }
-            .element{
-              box-sizing: border-box;
-              width: 100%;
-              height: @w*4.9;
-              border-left: @h*3 solid #edf1fa;
-              border-top: @h*4 solid #edf1fa;
-              .item{
-                width: 100%;
-                height: @h*6;
-                margin-top: @h;
-                margin-left: @h*2;
-                div{
-                  margin-top: @h;
-                  float: left; 
-                  &:after{
-                    content: '';
-                    clear: both;
-                    display: block;
-                  }                      
-                }                   
-                .username{
-                  .name{
-                    font-size: @f;
-                    color: black;
-                  }
-                  input{
-                    width: @w*2.4;
-                    height: @h*3;
-                    border-radius: 3px;
-                    background: none;
-                    border: 1px solid grey;
-                    outline: none;
-                  }
-                }
-                .state{
-                  .text{
-                    font-size: @f;
-                    text-align: center;
-                    line-height: @h*3;
-                    color: black;
-                    margin-left: @h*2;
-                  }                
-                  .condition{
-                    width: @w*2;
-                    height: @h*3;
-                    border-radius: 3px;              
-                    .init{
-                      height: @h*3;
-                      width: @w*2;
-                      font-size: 14px;
-                      line-height: @h*3;
-                      text-align: center;
-                    }
-                  }
-                }              
-                .query{
-                  .style();
-                  color: white;
-                  background: #1890ff;
-                  margin-left: @h*2;
-                  margin-top: @h*1.5;
-                }
-                .reset{
-                  .style();
-                  color: black;
-                  border: 1px solid #c6c6c6;
-                  margin-top: @h*1.5;
-                } 
-                .left{
-                  .style();
-                  color: white;
-                  background: #1890ff;
-                }
-                .center{
-                  .style();
-                  color: black;
-                  border: 1px solid #c6c6c6;
-                }
-                .right{
-                  .style();
-                  color: white;
-                  background: #ff4d4f;
-                }
-                ul{
-                  width: 100%;
-                  height: @h*4;
-                  background: #fafafa;
-                  border-bottom: 1px solid #bebebe;
-                  li{
-                    width: @w;
+            .sumbol {
+                position: absolute;
+                right: @h*2;
+                top: 0;
+                cursor: pointer;
+            }
+            .setting {
+                display: none;
+                li {
+                    box-sizing: border-box;
+                    width: @w*3;
                     height: @h*4;
-                    font-size: @f;
-                    text-align: center;
-                    color: black;
-                    text-align: left;
+                    font-size: 16px;
                     line-height: @h*4;
-                    float: left;
-                    margin-left: @h*2;
-                    .box{
-                      width: @h*2;
-                      height: @h*2;
-                      background: #1890ff;
-                      overflow: hidden;
-                      border-radius: 3px;
-                      margin-left: @h*2;
-                      .box2{
-                        width: 8px;
-                        height: 16px;
-                        margin-top: -5px;                     
-                        border-right: 1px solid white;
-                        border-bottom: 1px solid white;
-                        transform: rotate(45deg) translate(8px);
-                      }
+                    cursor: pointer;
+                    position: relative;
+                }
+                .user {
+                    .manage {
+                        width: @w*2.6;
+                        height: @h*4;
+                        font-size: 16px;
+                        line-height: @h*4;
+                        cursor: pointer;
+                        padding-left: @h*4;
                     }
-                  }
-                }              
-              }
+                    .covers {
+                        box-sizing: border-box;
+                        width: @w*9.6;
+                        height: @w*5.7;
+                        position: absolute;
+                        left: @w*3;
+                        top: -@h*5;
+                        border-top: 1px solid black;
+                        display: none;
+                        .upper {
+                            margin-bottom: 8px;
+                            .one {
+                                font-size: @f;
+                                color: gray;
+                                margin-left: @h*3;
+                            }
+                            .two {
+                                font-size: @s;
+                                color: black;
+                                margin-left: @h*2;
+                            }
+                        }
+                        .element {
+                            box-sizing: border-box;
+                            width: 100%;
+                            height: @w*4.9;
+                            border-left: @h*3 solid #edf1fa;
+                            border-top: @h*4 solid #edf1fa;
+                            .item {
+                                width: 100%;
+                                height: @h*6;
+                                margin-top: @h;
+                                margin-left: @h*2;
+                                div {
+                                    margin-top: @h;
+                                    float: left;
+                                    &:after {
+                                        content: '';
+                                        clear: both;
+                                        display: block;
+                                    }
+                                }
+                                .username {
+                                    .name {
+                                        font-size: @f;
+                                        color: black;
+                                    }
+                                    input {
+                                        width: @w*2.4;
+                                        height: @h*3;
+                                        border-radius: 3px;
+                                        background: none;
+                                        border: 1px solid grey;
+                                        outline: none;
+                                    }
+                                }
+                                .state {
+                                    .text {
+                                        font-size: @f;
+                                        text-align: center;
+                                        line-height: @h*3;
+                                        color: black;
+                                        margin-left: @h*2;
+                                    }
+                                    .condition {
+                                        width: @w*2;
+                                        height: @h*3;
+                                        border-radius: 3px;
+                                        .init {
+                                            height: @h*3;
+                                            width: @w*2;
+                                            font-size: 14px;
+                                            line-height: @h*3;
+                                            text-align: center;
+                                        }
+                                    }
+                                }
+                                .query {
+                                    .style();
+                                    color: white;
+                                    background: #1890ff;
+                                    margin-left: @h*2;
+                                    margin-top: @h*1.5;
+                                }
+                                .reset {
+                                    .style();
+                                    color: black;
+                                    border: 1px solid #c6c6c6;
+                                    margin-top: @h*1.5;
+                                }
+                                .left {
+                                    .style();
+                                    color: white;
+                                    background: #1890ff;
+                                }
+                                .center {
+                                    .style();
+                                    color: black;
+                                    border: 1px solid #c6c6c6;
+                                }
+                                .right {
+                                    .style();
+                                    color: white;
+                                    background: #ff4d4f;
+                                }
+                                ul {
+                                    width: 100%;
+                                    height: @h*4;
+                                    background: #fafafa;
+                                    border-bottom: 1px solid #bebebe;
+                                    li {
+                                        width: @w;
+                                        height: @h*4;
+                                        font-size: @f;
+                                        text-align: center;
+                                        color: black;
+                                        text-align: left;
+                                        line-height: @h*4;
+                                        float: left;
+                                        margin-left: @h*2;
+                                        .box {
+                                            width: @h*2;
+                                            height: @h*2;
+                                            background: #1890ff;
+                                            overflow: hidden;
+                                            border-radius: 3px;
+                                            margin-left: @h*2;
+                                            .box2 {
+                                                width: 8px;
+                                                height: 16px;
+                                                margin-top: -5px;
+                                                border-right: 1px solid white;
+                                                border-bottom: 1px solid white;
+                                                transform: rotate(45deg) translate(8px);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .interface {
+                    padding-left: @h*4;
+                }
             }
-          }
-        } 
-        .interface{
-          padding-left: @h*4;
-        }       
-      } 
-    }      
-  }
-}  
-
-
-
-
-
-  
+        }
+    }
+}

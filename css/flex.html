@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex layout</title>
+    <style>
+        .one{
+            display: flex;
+            width: 200px;
+        }
+        .one .a{
+            height: 100px;
+            background-color: aquamarine;
+            width: 60px;
+        }
+        .one .c{
+            height: 100px;
+            background-color: azure;
+            width: 20px;
+            flex-grow: 2;
+        }
+        .one .b{
+            background-color: khaki;
+            flex-grow: 1; 
+            height: 100px;
+        }
+        .two{
+            display: flex;
+            width: 500px;
+            height: 500px;
+            flex-wrap: wrap;
+            /* justify-content: space-between; */
+            border: 1px solid;
+
+        }
+        .two div{
+            height: 110px;
+            background-color: bisque;
+            /* flex: 1; */
+            width: 110px;
+            /* width: 80px; */
+        }
+    </style>
+</head>
+<body>
+    <div class="one">
+       <div class="a"></div>
+       <div class="b"></div>
+       <div class="c"></div>
+    </div>
+    <div class="two">
+        <div style="order: 4;">1</div>
+        <div style="order: 3;">2</div>
+        <div>3</div>
+        <div>4</div>
+
+    </div>
+    <script>
+    /**
+        flex
+        container flex-direction/flex-wrap/flex-flow/justify-content/align-content/align-items
+        item order/flex-grow/flex-shirnk/flex-basis/flex/align-self
+    */
+
+    </script>
+</body>
+</html>
